@@ -1,6 +1,10 @@
 #BlueJ class context
 comment0.target=Part1
 comment0.text=\r\n\ Finding\ a\ DNA\ sequence\ in\ string.\r\n\ \r\n\ @crazyozzy\ aka\ KDA\ (your\ name)\ \r\n\ @0.0.0\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=strDNA
+comment1.params=dna
 comment1.target=java.lang.String\ findSimpleGene(java.lang.String)
-numComments=2
+comment2.params=
+comment2.target=void\ testSimpleGene()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

@@ -1,21 +1,21 @@
 
 /**
- * Finding a DNA sequence in string.
+ * Write a description of Part2 here.
  * 
- * @crazyozzy aka KDA (your name) 
- * @0.0.0 (a version number or a date)
+ * @crazyozzy aka KDA
+ * @0.0.0
  */
-public class Part1 {
-    public String findSimpleGene (String dna){
+public class Part2 {
+    public String findSimpleGene (String dna, String startCodon, String stopCodon){
         int startIndex = 0;
         int stopIndex = 0;
         
-        startIndex = dna.indexOf("ATG");
+        startIndex = dna.indexOf(startCodon);
         if (startIndex == -1) {
             return "";
         };
         
-        stopIndex = dna.indexOf("TAA", startIndex + 3);
+        stopIndex = dna.indexOf(stopCodon, startIndex + 3);
         if (stopIndex == -1) {
             return "";
         };
@@ -34,24 +34,27 @@ public class Part1 {
         String st4 = "ASDFATGHYTSDFTAAKEQRIFASFQ";
         String st5 = "AFRWFATGFSARWTAAFFDQER";
         
+        String startCodon = "ATX";
+        String stopCodon = "TAA";
+        
         System.out.println(st1);
-        System.out.println("Founded DNA: " + findSimpleGene(st1) + "\n");
+        System.out.println("Founded DNA: " + findSimpleGene(st1, startCodon, stopCodon) + "\n");
         
         System.out.println(st2);
-        System.out.println("Founded DNA: " + findSimpleGene(st2) + "\n");
+        System.out.println("Founded DNA: " + findSimpleGene(st2, startCodon, stopCodon) + "\n");
         
         System.out.println(st3);
-        System.out.println("Founded DNA: " + findSimpleGene(st3) + "\n");
+        System.out.println("Founded DNA: " + findSimpleGene(st3, startCodon, stopCodon) + "\n");
         
         System.out.println(st4);
-        System.out.println("Founded DNA: " + findSimpleGene(st4) + "\n");
+        System.out.println("Founded DNA: " + findSimpleGene(st4, startCodon, stopCodon) + "\n");
         
         System.out.println(st5);
-        System.out.println("Founded DNA: " + findSimpleGene(st5) + "\n");
+        System.out.println("Founded DNA: " + findSimpleGene(st5, startCodon, stopCodon) + "\n");
     }
     
     public static void main (String[] args) {
-        Part1 pt1 = new Part1();
-        pt1.testSimpleGene();
+        Part2 pt2 = new Part2();
+        pt2.testSimpleGene();
     }
 }
