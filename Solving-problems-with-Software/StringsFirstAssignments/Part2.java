@@ -31,10 +31,10 @@ public class Part2 {
         String st1 = "GTFSDQWTERTGDFDSTAAGVCSFE";
         String st2 = "AFWRATGFSDQWWASFDDERQWREWFAS";
         String st3 = "ASDASFWQWFVZXASFWRQVVGAXDFTEQ";
-        String st4 = "ASDFATGHYTSDFTAAKEQRIFASFQ";
+        String st4 = "AAATGCCCTAACTAGATTAAGAAACC";
         String st5 = "AFRWFATGFSARWTAAFFDQER";
         
-        String startCodon = "ATX";
+        String startCodon = "ATG";
         String stopCodon = "TAA";
         
         System.out.println(st1);
