@@ -78,8 +78,6 @@ public class Part3 {
 	return "";
     }
 
-    }
-
     public void printAllGenes (String dna) {
 	int tempIndex = dna.indexOf("ATG");
 	System.out.println("DNA string: " + dna);
@@ -98,7 +96,7 @@ public class Part3 {
 	int tempIndex = dna.indexOf("ATG");
 	int counter = 0;
 
-	System.outprintln("DNA string: " + dna);
+	//System.out.println("DNA string: " + dna);
 
 	if (tempIndex == -1) {
 	    System.out.println("No genes found: there is no ATG");
@@ -115,7 +113,7 @@ public class Part3 {
 
     public void printcountGenes (String dna) {
 	System.out.println("DNA string: " + dna);
-	//System.out.println("Count of genes founded: " + 1 + "\n");
+	System.out.println("Count of genes founded: " + countGenes(dna) + "\n");
     }
 
     public void testcountGenes () {
@@ -127,11 +125,11 @@ public class Part3 {
 	String st6 = "ATGCTATAACGATGTACTAGCGCGTAGATGTAG"; //several genes
 
 	printcountGenes(st1);
-	/*printcountGenes(st1);
-        printcountGenes(st1);
-	printcountGenes(st1);
-	printcountGenes(st1);
-	printcountGenes(st1);*/
+	printcountGenes(st2);
+        printcountGenes(st3);
+	printcountGenes(st4);
+	printcountGenes(st5);
+	printcountGenes(st6);
     }
     
     public static void main (String[] args) {
