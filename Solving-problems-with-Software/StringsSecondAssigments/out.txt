@@ -1,0 +1,88 @@
+Part3.java:83: error: class, interface, or enum expected
+    public void printAllGenes (String dna) {
+           ^
+Part3.java:85: error: class, interface, or enum expected
+	System.out.println("DNA string: " + dna);
+	^
+Part3.java:87: error: class, interface, or enum expected
+	if (tempIndex == -1) {
+	^
+Part3.java:89: error: class, interface, or enum expected
+	}
+	^
+Part3.java:93: error: class, interface, or enum expected
+	    tempIndex = dna.indexOf("ATG", tempIndex + 1);
+	    ^
+Part3.java:94: error: class, interface, or enum expected
+	}
+	^
+Part3.java:97: error: class, interface, or enum expected
+    public int countGenes (String dna) {
+           ^
+Part3.java:99: error: class, interface, or enum expected
+	int counter = 0;
+	^
+Part3.java:101: error: class, interface, or enum expected
+	System.outprintln("DNA string: " + dna);
+	^
+Part3.java:103: error: class, interface, or enum expected
+	if (tempIndex == -1) {
+	^
+Part3.java:105: error: class, interface, or enum expected
+	    return counter;
+	    ^
+Part3.java:106: error: class, interface, or enum expected
+	}
+	^
+Part3.java:109: error: class, interface, or enum expected
+	    if ( !"".equals(findGene(dna, tempIndex)) ) {counter++;}
+	                                                           ^
+Part3.java:111: error: class, interface, or enum expected
+	}
+	^
+Part3.java:114: error: class, interface, or enum expected
+    }
+    ^
+Part3.java:116: error: class, interface, or enum expected
+    public void printcountGenes (String dna) {
+           ^
+Part3.java:118: error: class, interface, or enum expected
+	System.out.println("Count of genes founded: " + countGenes(dna) + "\n");
+	^
+Part3.java:119: error: class, interface, or enum expected
+    }
+    ^
+Part3.java:121: error: class, interface, or enum expected
+    public void testcountGenes () {
+           ^
+Part3.java:123: error: class, interface, or enum expected
+	String st2 = "TACATGATCCTATAATTAGC"; //
+	^
+Part3.java:124: error: class, interface, or enum expected
+	String st3 = "ATGCTATAGTAACTTCG"; //TAG first
+	^
+Part3.java:125: error: class, interface, or enum expected
+	String st4 = "ATCATGCGTTAATAGCGG"; //TAA first
+	^
+Part3.java:126: error: class, interface, or enum expected
+	String st5 = "ATGCGTAATAGCCGGTA"; //no TAA TAG
+	^
+Part3.java:127: error: class, interface, or enum expected
+	String st6 = "ATGCTATAACGATGTACTAGCGCGTAGATGTAG"; //several genes
+	^
+Part3.java:129: error: class, interface, or enum expected
+	printcountGenes(st1);
+	^
+Part3.java:135: error: class, interface, or enum expected
+    }
+    ^
+Part3.java:137: error: class, interface, or enum expected
+    public static void main (String[] args) {
+                  ^
+Part3.java:140: error: class, interface, or enum expected
+	pt3.testcountGenes();
+	^
+Part3.java:141: error: class, interface, or enum expected
+    }
+    ^
+29 errors
