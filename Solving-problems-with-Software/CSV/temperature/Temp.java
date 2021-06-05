@@ -29,8 +29,28 @@ public class Temp {
 		return lowestRow;
 	}
 
+	public CSVRecord lowestHumidityInFile (CSVParser parser) {
+		CSVRecord lowestRow = null;
+
+		for (CSVRecord record : parser) {
+			if (lowestRow == null) {
+				lowestRow = record;
+			}
+			else {
+				int recordHumidity = Integer.parseInt(record.get("Humidity"));
+				int lowestRowHumidity = Integer.parseInt(lowestRow.get("Humidity"));
+
+				if ( (recordHumidity < lowestRowHumidity) && !("N/A".equals(record.get("Humidity"))) ) {
+					lowestRow = record;
+				}
+			}
+		}
+
+		return lowestRow;
+	}
+
 	public String fileWithColdestTemperature () {
-		DirectoryResource dr = new DirectoryResource("");
+		DirectoryResource dr = new DirectoryResource();
 		File lowestTempFile = null;
 
 		for (File file : dr.selectedFiles()) {
@@ -66,9 +86,18 @@ public class Temp {
 		System.out.println("Lowest temp: " + lowestRow.get("TemperatureF") + " at " + lowestRow.get("DateUTC"));
 	}
 
+	public void testLowestHumidityInFile () {
+		FileResource fr = new FileResource("./nc_weather/2014/weather-2014-01-20.csv");
+		CSVParser parser = fr.getCSVParser();
+		CSVRecord lowestRow = lowestHumidityInFile(parser);
+
+		System.out.println("Lowest humidity: " + lowestRow.get("Humidity") + " at " + lowestRow.get("DateUTC"));
+	}
+
 	public static void main (String[] args) {
 		Temp tmp = new Temp();
 		//tmp.testerColdestHourInFile();
-		tmp.testFileWithColdestTemperature(); 
+		//tmp.testFileWithColdestTemperature();
+		tmp.testLowestHumidityInFile();
 	}
 }
